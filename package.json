@@ -2,6 +2,7 @@
   "name": "growsmart-dashboard",
   "version": "1.0.0",
   "description": "Modern premium admin dashboard for GrowSmart",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

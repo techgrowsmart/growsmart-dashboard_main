@@ -2,6 +2,26 @@
 
 A modern, premium admin dashboard for business growth, analytics, and teacher profile management. Built with React 18, Tailwind CSS, and Recharts for data visualization.
 
+## Dashboard Previews
+
+### Executive Overview
+![Executive Overview](./public/screenshots/executive-overview.png)
+
+### Teacher Profiles
+![Teacher Profiles](./public/screenshots/teacher-profiles.png)
+
+### User Management
+![User Management](./public/screenshots/user-management.png)
+
+### Business Analytics
+![Business Analytics](./public/screenshots/business-analytics.png)
+
+### Operations
+![Operations](./public/screenshots/operations.png)
+
+### Finance & Billing
+![Finance & Billing](./public/screenshots/finance-billing.png)
+
 ## Features
 
 ### Dashboard Sections
