@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    @apply overflow-hidden h-screen;
+  }
+  
   body {
     @apply bg-dark-bg text-dark-text font-sans antialiased;
     font-family: 'Inter', sans-serif;

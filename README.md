@@ -1,14 +1,11 @@
 # GrowSmart Admin Dashboard
 
-A modern, premium admin dashboard for business growth, analytics, and teacher profile management. Built with React 18, Tailwind CSS, and Recharts for data visualization.
+A modern, premium admin dashboard for business growth, analytics, and user management. Built with React 18, Tailwind CSS, and Recharts for data visualization.
 
 ## Dashboard Previews
 
 ### Executive Overview
 ![Executive Overview](./public/screenshots/executive-overview.png)
-
-### Teacher Profiles
-![Teacher Profiles](./public/screenshots/teacher-profiles.png)
 
 ### User Management
 ![User Management](./public/screenshots/user-management.png)
@@ -27,27 +24,11 @@ A modern, premium admin dashboard for business growth, analytics, and teacher pr
 ### Dashboard Sections
 
 - **Executive Overview**: Key business metrics at a glance with elegant metric cards
-- **Teacher Profile Management**: Complete teacher application review system with document verification
 - **User Management**: Detailed user management with search and filters
 - **Business Analytics**: Advanced visual analytics with interactive charts (Indian states data)
 - **Operations Dashboard**: Track projects, tasks, and team activities
 - **Finance & Billing**: Manage invoices, payments, and financial metrics
 - **Notifications Panel**: Real-time alerts, user issues, and pending actions
-
-### Teacher Profile Management Features
-
-- **Application Review System**: Complete teacher application management
-- **Section-Specific Verification Dropdowns**: Each document type has relevant verification statuses:
-  - Bank Account: Account verification, IFSC verification, name match, etc.
-  - PAN Card: PAN verification, name verification, document quality checks
-  - Aadhaar Card: Aadhaar verification, address verification, DOB verification
-  - KYC Selfie: Face match, Aadhaar match, selfie quality checks
-  - Degree Certificates: Certificate verification, university verification, year verification
-- **Document Management**: View and download all submitted documents
-- **Status Tracking**: Individual document status tracking with color-coded badges
-- **Approve/Reject Actions**: Prominent action buttons at the top of the modal
-- **Search & Filter**: Search by name, filter by application status
-- **Take Action Button**: Quick access to review teacher applications
 
 ## Tech Stack
 
@@ -111,7 +92,6 @@ growsmart-dashboard/
 │   ├── components/
 │   │   ├── Sidebar.jsx              # Main navigation sidebar
 │   │   ├── ExecutiveOverview.jsx    # Dashboard metrics and overview
-│   │   ├── TeacherProfile.jsx       # Teacher application management
 │   │   ├── UserManagement.jsx       # User management system
 │   │   ├── BusinessAnalytics.jsx    # Analytics with charts
 │   │   ├── OperationsDashboard.jsx  # Operations tracking
@@ -137,16 +117,7 @@ Colors are defined in `tailwind.config.js` under the `theme.extend.colors` secti
 
 Each dashboard section is a separate component in `src/components/`. You can modify or extend these components to add new features or change existing functionality.
 
-### Teacher Profile Verification Options
-
-The document verification dropdown options are defined in `TeacherProfile.jsx` in the `documentOptions` object. You can customize these options for each document type:
-- `bankAccount`: Bank account verification statuses
-- `panCard`: PAN card verification statuses
-- `aadharCard`: Aadhaar card verification statuses
-- `kycSelfie`: KYC selfie verification statuses
-- `degree`: Degree certificate verification statuses
-
-### Charts
+## Customization
 
 Charts are powered by Recharts. You can customize chart types, data, and styling in each analytics component. The regional data currently shows Indian states (Maharashtra, Tamil Nadu, Karnataka, Uttar Pradesh, Delhi).
 

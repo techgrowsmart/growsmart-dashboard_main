@@ -1,1 +1,41 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Database credentials (Astra secure connect bundle)
+secure-connect-*.zip
+*.zip
+
+# Deployment
+.vercel/
+.netlify/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.sw?
+
+# Misc
+coverage/
+.cache/

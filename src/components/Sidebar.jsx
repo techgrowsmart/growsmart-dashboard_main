@@ -1,26 +1,29 @@
 import { useState } from 'react';
-import { 
-  LayoutDashboard, 
-  Users, 
-  BarChart3, 
-  ClipboardList, 
-  DollarSign, 
+import {
+  LayoutDashboard,
+  Users,
+  BarChart3,
+  ClipboardList,
+  DollarSign,
   Bell,
   Menu,
   X,
   Settings,
   LogOut,
-  GraduationCap
+  Shield,
+  BookOpen,
+  Megaphone
 } from 'lucide-react';
 
-const Sidebar = ({ activeSection, setActiveSection, isMobileOpen, setIsMobileOpen }) => {
+const Sidebar = ({ activeSection, setActiveSection, isMobileOpen, setIsMobileOpen, onLogout }) => {
   const menuItems = [
     { id: 'overview', icon: LayoutDashboard, label: 'Executive Overview' },
     { id: 'users', icon: Users, label: 'User Management' },
-    { id: 'teachers', icon: GraduationCap, label: 'Teacher Profiles' },
+    { id: 'createClassData', icon: BookOpen, label: 'Create Class Data' },
     { id: 'analytics', icon: BarChart3, label: 'Business Analytics' },
     { id: 'operations', icon: ClipboardList, label: 'Operations' },
     { id: 'finance', icon: DollarSign, label: 'Finance & Billing' },
+    { id: 'advertisements', icon: Megaphone, label: 'Advertisement Mgmt' },
   ];
 
   return (
@@ -38,7 +41,7 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileOpen, setIsMobileOpe
         fixed left-0 top-0 h-full w-64 glass-card border-r border-dark-border z-50
         transform transition-transform duration-300 ease-in-out
         ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}
-        lg:translate-x-0 lg:static lg:z-30
+        lg:translate-x-0 lg:fixed lg:z-30
       `}>
         <div className="flex flex-col h-full">
           {/* Logo */}
@@ -84,7 +87,14 @@ const Sidebar = ({ activeSection, setActiveSection, isMobileOpen, setIsMobileOpe
               <Settings size={20} />
               <span className="font-medium">Settings</span>
             </button>
-            <button className="sidebar-item sidebar-item-inactive w-full text-red-400 hover:text-red-300 hover:bg-red-500/10">
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileOpen(false);
+                onLogout?.();
+              }}
+              className="sidebar-item sidebar-item-inactive w-full text-red-400 hover:text-red-300 hover:bg-red-500/10"
+            >
               <LogOut size={20} />
               <span className="font-medium">Logout</span>
             </button>
